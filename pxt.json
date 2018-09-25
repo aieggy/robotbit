@@ -4,6 +4,7 @@
     "description": "Extension for Eggtoy robotbit microbit",
     "license": "MIT",
     "dependencies": {
+		"AiEggtoyRobotbit_IR": "github:aieggy/Robotbit_IR",
         "core": "*"
     },
     "files": [
