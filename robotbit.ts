@@ -84,11 +84,11 @@ namespace robotbit{
     }
 	
 	export enum MotorState {
-        //% blockId="Motor_Run" block="前行"
+        //% blockId="Motor_Run" block="电机前进"
         Motor_Run = 1,
-        //% blockId="Motor_Back" block="后退"
+        //% blockId="Motor_Back" block="电机后退"
         Motor_Back = 2,
-        //% blockId="Motor_Stop" block="停止"
+        //% blockId="Motor_Stop" block="电机停止"
         Motor_Stop = 3
     }
 	
