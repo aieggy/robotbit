@@ -1,11 +1,11 @@
 {
-  "robotbit.CarCtrl|block": "小车控制|%index|时间 %time(秒)",
-  "robotbit.MotorControl_Car|block": "小车电机控制| 左轮|%stateL|速度%speedL| 右轮|%stateR|速度%speedR|时间%time(秒)",
+  "robotbit.CarCtrl|block": "小车控制|%index|时间(秒) %time",
+  "robotbit.MotorControl_Car|block": "小车电机控制| 左轮|%stateL|速度%speedL| 右轮|%stateR|速度%speedR|时间(秒)%time",
   "robotbit.RGB_Car_BigLight|block": "小车大灯|选择车灯颜色 %value",
   "robotbit.Avoid_Sensor|block": "避障传感器|检测到 %value",
   "robotbit.Get_Avoid_Sensor|block": "避障传感器值",
   "robotbit.Music_Car|block": "小车音乐播放|%index",
-  "robotbit.CarCtrlSpeed|block": "小车速度控制|%index|速度 %speed|时间 %time(秒)",
+  "robotbit.CarCtrlSpeed|block": "小车速度控制|%index|速度 %speed|时间(秒) %time",
   "robotbit.Line_Sensor|block": "巡线传感器|位置 %direct|检测到 %value",
   "robotbit.Get_Line_Sensor|block": "巡线传感器|位置 %direct"
 }
