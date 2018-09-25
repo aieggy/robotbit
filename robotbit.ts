@@ -377,14 +377,14 @@ namespace robotbit{
         Car_stop();
     }
 	
-	//% blockId=MotorControl_Car block="MotorControl_Car|stateL %stateL|speedL %speedL|stateR %stateR|speedR %speedR|time %time"
+	//% blockId=MotorControl_Car block="MotorControl_Car|stateL %stateL|speedL %speedL|stateR %stateR|speedR %speedR"
     //% weight=92
     //% blockGap=10
     //% speedL.min=0 speedL.max=255
 	//% speedR.min=0 speedR.max=255
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-	export function MotorControl_Car(stateL: MotorState, speedL:number, stateR: MotorState, speedR: number, time: number):void{
+	export function MotorControl_Car(stateL: MotorState, speedL:number, stateR: MotorState, speedR: number):void{
 		speedL = speedL * 16; // map 350 to 4096
         speedR = speedR * 16;
         if (speedL >= 4096) {
@@ -429,17 +429,8 @@ namespace robotbit{
         else
         {
             setPwm(14, 0, 0);
-            setPwm(15, 0, 0);	
+            setPwm(15, 0, 0);
         }
-		
-        basic.pause(time*1000);
-		
-        setPwm(12, 0, 0);
-        setPwm(13, 0, 0);
-
-        setPwm(15, 0, 0);
-        setPwm(14, 0, 0);
-
 	}
 	
     //% blockId=m_RGB_Car_BigLight block="Motor value|%value"
