@@ -400,12 +400,12 @@ namespace robotbit{
             speedR = 350
         }
 
-        if(stateL == Motor_Run)
+        if(stateL == MotorState.Motor_Run)
         {
             setPwm(12, 0, speedL);
             setPwm(13, 0, 0);
         }
-        else if(stateL == Motor_Back)
+        else if(stateL == MotorState.Motor_Back)
         {
             setPwm(12, 0, 0);
             setPwm(13, 0, speedL);	
@@ -416,12 +416,12 @@ namespace robotbit{
             setPwm(13, 0, 0);	
         }
 		
-        if(stateR == Motor_Run)
+        if(stateR == MotorState.Motor_Run)
         {
             setPwm(14, 0, speedL);
             setPwm(15, 0, 0);
         }
-        else if(stateR == Motor_Back)
+        else if(stateR == MotorState.Motor_Back)
         {
             setPwm(14, 0, 0);
             setPwm(15, 0, speedR);
