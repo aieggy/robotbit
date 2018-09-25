@@ -590,7 +590,7 @@ namespace robotbit{
 		
         switch (value) {
             case enAvoidState.OBSTACLE: {
-                if (UltrasonicValue < 5) {
+                if (UltrasonicValue < 10) {
                     temp = true;
                 }
                 else {                 
@@ -600,7 +600,7 @@ namespace robotbit{
             }
 
             case enAvoidState.NOOBSTACLE: {
-                if (UltrasonicValue > 5) {
+                if (UltrasonicValue > 10) {
                     temp = true;
                 }
                 else {
