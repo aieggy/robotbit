@@ -402,13 +402,13 @@ namespace robotbit{
 
         if(stateL == MotorState.Motor_Run)
         {
-            setPwm(12, 0, speedL);
-            setPwm(13, 0, 0);
+            setPwm(13, 0, speedL);
+            setPwm(12, 0, 0);
         }
         else if(stateL == MotorState.Motor_Back)
         {
-            setPwm(12, 0, 0);
-            setPwm(13, 0, speedL);	
+            setPwm(13, 0, 0);
+            setPwm(12, 0, speedL);	
         }
         else
         {
@@ -418,13 +418,13 @@ namespace robotbit{
 		
         if(stateR == MotorState.Motor_Run)
         {
-            setPwm(14, 0, speedL);
-            setPwm(15, 0, 0);
+            setPwm(15, 0, speedR);
+            setPwm(14, 0, 0);
         }
         else if(stateR == MotorState.Motor_Back)
         {
-            setPwm(14, 0, 0);
-            setPwm(15, 0, speedR);
+            setPwm(15, 0, 0);
+            setPwm(14, 0, speedR);
         }
         else
         {
