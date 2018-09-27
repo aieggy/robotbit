@@ -390,15 +390,11 @@ namespace robotbit{
         if (speedL >= 4096) {
             speedL = 4095
         }
-        if (speedL <= 350) {
-            speedL = 350
-        }
+
         if (speedR >= 4096) {
             speedR = 4095
         }
-        if (speedR <= 350) {
-            speedR = 350
-        }
+
 
         if(stateL == MotorState.Motor_Run)
         {
