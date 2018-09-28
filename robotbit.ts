@@ -384,9 +384,10 @@ namespace robotbit{
 	//% speedR.min=0 speedR.max=255
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-	export function MotorControl_Car(stateL: MotorState, speedL:number, stateR: MotorState, speedR: number):void{
-		speedL = speedL * 16; // map 350 to 4096
+	export function MotorControl_Car(stateL: MotorState, speedL: number, stateR: MotorState, speedR: number): void {
+        speedL = speedL * 16; // map 350 to 4096
         speedR = speedR * 16;
+        //14,15 left //12,13 right
         if (speedL >= 4096) {
             speedL = 4095
         }
@@ -396,38 +397,32 @@ namespace robotbit{
         }
 
 
-        if(stateL == MotorState.Motor_Run)
-        {
-            setPwm(13, 0, speedR);
-            setPwm(12, 0, 0);
-        }
-        else if(stateL == MotorState.Motor_Back)
-        {
-            setPwm(13, 0, 0);
-            setPwm(12, 0, speedR);	
-        }
-        else
-        {
-            setPwm(12, 0, 0);
-            setPwm(13, 0, 0);	
-        }
-		
-        if(stateR == MotorState.Motor_Run)
-        {
+        if (stateL == MotorState.Motor_Run) {
             setPwm(15, 0, speedL);
             setPwm(14, 0, 0);
         }
-        else if(stateR == MotorState.Motor_Back)
-        {
+        else if (stateL == MotorState.Motor_Back) {
             setPwm(15, 0, 0);
             setPwm(14, 0, speedL);
         }
-        else
-        {
+        else {
             setPwm(14, 0, 0);
             setPwm(15, 0, 0);
         }
-	}
+
+        if (stateR == MotorState.Motor_Run) {
+            setPwm(13, 0, speedR);
+            setPwm(12, 0, 0);
+        }
+        else if (stateR == MotorState.Motor_Back) {
+            setPwm(13, 0, 0);
+            setPwm(12, 0, speedR);
+        }
+        else {
+            setPwm(12, 0, 0);
+            setPwm(13, 0, 0);
+        }
+    }
 	
     //% blockId=m_RGB_Car_BigLight block="Motor value|%value"
     //% weight=101
