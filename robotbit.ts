@@ -600,7 +600,6 @@ namespace robotbit{
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Car(index: enMusic): void {
-        pins.analogSetPitchPin(AnalogPin.P12);
         switch (index) {
             case enMusic.dadadum: music.beginMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once); break;
             case enMusic.birthday: music.beginMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once); break;
