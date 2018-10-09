@@ -514,7 +514,7 @@ namespace robotbit{
         basic.pause(1);
         switch (direct) {
             case enPos.LeftState: {
-                if (pins.analogReadPin(AnalogPin.P2) < 450) {
+                if (pins.analogReadPin(AnalogPin.P2) < 500) {
                     if (value == enLineState.White) {
                         temp = true;
                     }
@@ -528,7 +528,7 @@ namespace robotbit{
             }
 
             case enPos.RightState: {
-                if (pins.analogReadPin(AnalogPin.P1) < 350) {
+                if (pins.analogReadPin(AnalogPin.P1) < 500) {
                     if (value == enLineState.White) {
                         temp = true;
                     }
